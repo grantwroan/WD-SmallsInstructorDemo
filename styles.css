@@ -1,30 +1,15 @@
-body {
-  background-color: #ffec65;
-  overflow-x: hidden;
-  max-width: 100%;
-}
+/* SMALLS - FULLY RESPONSIVE STYLESHEET
+   Desktop >1024px | Tablet 768-1024px | Mobile 480-767px | Sm Mobile <480px */
 
-html {
-  overflow-x: hidden;
-  max-width: 100%;
-}
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; max-width: 100%; font-size: 16px; }
+body { background-color: #ffec65; overflow-x: hidden; max-width: 100%; margin: 0; }
 
-navbar { 
-  background-color: #EEECE6;
-}
-
-.navbar-toggler {
-border: transparent;
-}
-
-.offcanvas-header, .offcanvas-body{
-  background-color: #ffec65;
-}
-
-hr {
-  margin: 1rem 0;
-  color: inherit;
-}
+.navbar { background-color: #EEECE6 !important; }
+.navbar-brand { font-family: "Sometype Mono", monospace; font-size: clamp(1rem, 2.5vw, 1.4rem); letter-spacing: 0.05em; }
+.navbar-toggler { border: transparent; }
+.offcanvas-header, .offcanvas-body { background-color: #ffec65; }
+hr { margin: 1rem 0; color: inherit; }
 
 .hero-image {
   height: 90vh;
@@ -32,253 +17,126 @@ hr {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
 }
 
-#main{
-  background-color: #EEECE6;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
+#main { background-color: #EEECE6; padding-top: 3rem; padding-bottom: 3rem; }
 
 h1 {
   font-family: "Sometype Mono", monospace;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-size: 100px;
+  font-size: clamp(2.5rem, 8vw, 6.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  word-break: break-word;
+  padding: 0 1rem;
 }
 
-.tag{
-  max-width: 100%;
-  width: 500px;
-  height: auto;
-}
+#main .container .row img { max-width: 100%; width: clamp(260px, 60vw, 500px); height: auto; }
 
 #Why-Smalls, #How_it_works, #say_hello {
   background-color: white;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 #Why-Smalls .col-md-6:first-child,
 #How_it_works .col-md-6:last-child,
 #say_hello .col-md-6:first-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center; padding: 0;
 }
 
-#Why-Smalls img,
-#How_it_works img,
-#say_hello img {
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
+#Why-Smalls img, #How_it_works img, #say_hello img {
+  border-radius: 10px; width: 100%; max-width: 100%; height: auto; object-fit: cover; display: block;
 }
 
-.col {
-  display: inline-block;
-  height: auto;
-  width: 30%;
-  margin: 1%;
-}
+.description { padding: clamp(1.25rem, 4vw, 5rem); display: flex; flex-direction: column; justify-content: center; }
+.description h3 { font-size: clamp(1.4rem, 3vw, 2.5rem); margin-bottom: clamp(0.75rem, 2vw, 2rem); line-height: 1.3; }
+.description p, .description ul { font-size: clamp(0.9rem, 1.5vw, 1.25rem); line-height: 1.75; margin-bottom: clamp(1rem, 2vw, 2rem); }
+.description .btn { align-self: flex-start; padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1.25rem, 3vw, 2rem); font-size: clamp(0.8rem, 1.2vw, 1rem); white-space: nowrap; }
+#How_it_works ul { list-style-type: none; padding-left: 0; }
+#How_it_works ul li { margin-bottom: 0.75rem; }
 
-figure {
-  margin: 0;
-  overflow: hidden;
-}
+figure { margin: 0; overflow: hidden; border-radius: 8px 8px 0 0; }
+#gallery { padding: clamp(1rem, 3vw, 2rem); }
+#gallery h3 { font-size: clamp(1rem, 2.5vw, 1.5rem); line-height: 1.4; text-align: center; margin: clamp(1rem, 3vw, 3rem) auto; max-width: 700px; }
+#gallery .row { align-items: stretch; }
+#gallery .col-6, #gallery .col-md-4 { display: flex; flex-direction: column; padding: 0.4rem; transition: transform 0.2s ease; }
+#gallery .col-6:hover, #gallery .col-md-4:hover { transform: translateY(-4px); }
+#gallery figure { flex: 0 0 auto; height: clamp(140px, 20vw, 300px); overflow: hidden; }
+#gallery figure img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.3s ease; }
+#gallery figure img:hover { transform: scale(1.04); }
 
-.col figure img {
-  width: 100%;
-  height: auto;
-}
+.benefits { background-color: #EEECE6; padding: clamp(0.6rem, 2vw, 1rem); flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; text-align: center; border-radius: 0 0 8px 8px; }
+.benefits h4 { font-size: clamp(0.75rem, 1.5vw, 1rem); margin-bottom: 0.4rem; }
+.benefits p { font-size: clamp(0.7rem, 1.3vw, 0.95rem); line-height: 1.5; margin: 0; }
 
-.description {
-  padding: 5rem;
-}
+footer { background-color: #EEECE6; color: #111; padding: clamp(1.5rem, 4vw, 2.5rem) 0; border-top: 2px solid #e0ddd4; }
+footer h5 { font-size: clamp(0.85rem, 1.5vw, 1rem); font-weight: 700; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+footer p, footer li, footer a { font-size: clamp(0.78rem, 1.3vw, 0.9rem); line-height: 1.7; }
+footer a { color: #333 !important; text-decoration: none; transition: color 0.2s; }
+footer a:hover { color: #000 !important; text-decoration: underline; }
+p { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+.btn { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+.btn:active { transform: translateY(0); box-shadow: none; }
 
-.description h3 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  line-height: 1.3;
-}
-
-.description p {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-
-.benefits {
-  background-color: #EEECE6;
-  padding: 1rem;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#gallery .row {
-  align-items: stretch;
-}
-
-#gallery .col-6,
-#gallery .col-md-4 {
-  display: flex;
-  flex-direction: column;
-}
-
-#gallery figure {
-  flex: 0 0 auto;
-  height: 300px;
-  overflow: hidden;
-}
-
-#gallery figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-#gallery .benefits {
-  flex: 1 1 auto;
-}
-
-p {
-  font-size: 16px;
-}
-
-#How_it_works ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-/* MEDIA QUERIES START HERE */
-/* ================================
-   TABLET MEDIA QUERY
-   768px – 1024px
-   Goal: Optimize layout & UX for
-   touch-first, mid-size screens
-================================ */
 @media (min-width: 768px) and (max-width: 1024px) {
-
-  /* --- Hero --- */
-  .hero-image {
-    height: 75vh;
-    background-position: center top;
-  }
-
-  /* --- Heading --- */
-  h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-  }
-
-  /* --- Section padding --- */
-  #main {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  /* --- Feature cards: stack image on top, text below --- */
-  #Why-Smalls .row,
-  #How_it_works .row,
-  #say_hello .row {
-    flex-direction: column;
-  }
-
-  /* Ensure reversed grid (#How_it_works) also stacks image on top */
-  #How_it_works .row {
-    flex-direction: column-reverse;
-  }
-
-  #Why-Smalls .col-md-6,
-  #How_it_works .col-md-6,
-  #say_hello .col-md-6 {
-    width: 100%;
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-
-  #Why-Smalls img,
-  #How_it_works img,
-  #say_hello img {
-    width: 100%;
-    max-height: 380px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  /* --- Description block: comfortable tablet reading --- */
-  .description {
-    padding: 2.5rem 2rem;
-    text-align: center;
-  }
-
-  .description h3 {
-    font-size: 2rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .description p,
-  .description ul {
-    font-size: 1.1rem;
-    line-height: 1.75;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .description .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-  }
-
-  /* --- Gallery: 3-col grid on tablet (intentional, not default) --- */
-  #gallery .col-6 {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-
-  #gallery figure {
-    height: 260px;
-  }
-
-  .benefits {
-    min-height: 170px;
-    padding: 1.25rem;
-    font-size: 0.95rem;
-  }
-
-  /* --- Feature col spacing --- */
-  .feature-col {
-    padding: 1.5rem 1rem;
-  }
-
-  /* --- Card rounding & spacing --- */
-  #Why-Smalls,
-  #How_it_works,
-  #say_hello {
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  /* --- Footer: 2-column layout on tablet --- */
-  footer .col-lg-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  footer .col-md-4 {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
+  .hero-image { height: 65vh; background-position: center top; }
+  #main { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  #Why-Smalls .row, #say_hello .row { flex-direction: column; }
+  #How_it_works .row { flex-direction: column-reverse; }
+  #Why-Smalls .col-md-6, #How_it_works .col-md-6, #say_hello .col-md-6 { width: 100%; max-width: 100%; flex: 0 0 100%; }
+  #Why-Smalls img, #How_it_works img, #say_hello img { max-height: 360px; object-fit: cover; }
+  .description { padding: 2rem 1.75rem; align-items: center; text-align: center; }
+  .description p, .description ul { text-align: left; max-width: 580px; }
+  .description .btn { align-self: center; }
+  #gallery .col-6 { flex: 0 0 33.333%; max-width: 33.333%; }
+  #gallery figure { height: 220px; }
+  footer .col-lg-6 { flex: 0 0 100%; max-width: 100%; margin-bottom: 1.25rem; }
+  footer .col-md-4 { flex: 0 0 33.333%; max-width: 33.333%; }
 }
- /* MOBILE MEDIA QUERY */
- /* WRITE YOUR CODE BELOW THIS LINE */
+
+@media (max-width: 767px) {
+  .hero-image { height: 55vh; background-position: center top; }
+  #main { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+  #Why-Smalls .row, #say_hello .row { flex-direction: column; }
+  #How_it_works .row { flex-direction: column-reverse; }
+  #Why-Smalls .col-md-6, #How_it_works .col-md-6, #say_hello .col-md-6 { width: 100%; max-width: 100%; flex: 0 0 100%; }
+  #Why-Smalls img, #How_it_works img, #say_hello img { width: 100%; max-height: 280px; object-fit: cover; border-radius: 8px; }
+  #Why-Smalls, #How_it_works, #say_hello { padding: 1rem; margin-bottom: 1.25rem; border-radius: 10px; }
+  .description { padding: 1.25rem 1rem; text-align: center; align-items: center; }
+  .description h3 { font-size: clamp(1.3rem, 5vw, 1.75rem); margin-bottom: 0.75rem; }
+  .description p, .description ul { font-size: 0.95rem; text-align: left; line-height: 1.7; width: 100%; }
+  .description .btn { align-self: center; min-width: 160px; padding: 0.65rem 1.75rem; font-size: 0.875rem; }
+  #gallery figure { height: 180px; }
+  .benefits h4 { font-size: 0.75rem; }
+  .benefits p { font-size: 0.7rem; }
+  #gallery .container.text-center .btn { width: 80%; max-width: 280px; padding: 0.75rem 1.5rem; }
+  footer [class*="col-"] { flex: 0 0 100% !important; max-width: 100% !important; margin-bottom: 1.25rem; }
+  footer h5 { font-size: 0.875rem; }
+  footer p, footer a, footer li { font-size: 0.82rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-image { height: 45vh; background-position: top center; }
+  #main { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  #Why-Smalls, #How_it_works, #say_hello { padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; }
+  #Why-Smalls img, #How_it_works img, #say_hello img { max-height: 220px; }
+  .description { padding: 1rem 0.75rem; }
+  .description h3 { font-size: clamp(1.15rem, 5.5vw, 1.5rem); margin-bottom: 0.6rem; }
+  .description p, .description ul { font-size: 0.875rem; line-height: 1.65; }
+  .description .btn { width: 100%; text-align: center; padding: 0.7rem 1rem; }
+  #gallery .col-6, #gallery .col-md-4 { flex: 0 0 100%; max-width: 100%; }
+  #gallery figure { height: 220px; border-radius: 8px 8px 0 0; }
+  .benefits { min-height: unset; padding: 0.75rem; }
+  .benefits h4 { font-size: 0.85rem; }
+  .benefits p { font-size: 0.82rem; }
+  #main .container .row img { width: 90vw; }
+  #gallery { padding: 0.75rem; }
+  #gallery h3 { font-size: clamp(0.95rem, 4.5vw, 1.2rem); margin: 1rem auto; }
+}
+
+/* MOBILE MEDIA QUERY */
+/* WRITE YOUR CODE BELOW THIS LINE */
